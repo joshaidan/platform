@@ -86,11 +86,11 @@ type SqlSupplierOldStores struct {
 }
 
 type SqlSupplier struct {
+	rrCounter      int64
+	srCounter      int64
 	master         *gorp.DbMap
 	replicas       []*gorp.DbMap
 	searchReplicas []*gorp.DbMap
-	rrCounter      int64
-	srCounter      int64
 	oldStores      SqlSupplierOldStores
 }
 
