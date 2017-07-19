@@ -320,8 +320,8 @@ ifeq ($(BUILD_ENTERPRISE_READY),true)
 endif
 
 build-linux: .prebuild prepare-enterprise
-	@echo Build Linux amd64
-	env GOOS=linux GOARCH=amd64 $(GO) install $(GOFLAGS) $(GO_LINKER_FLAGS) ./cmd/platform
+	@echo Build Linux i386
+	env GOOS=linux GOARCH=386 $(GO) install $(GOFLAGS) $(GO_LINKER_FLAGS) ./cmd/platform
 
 build-osx: .prebuild prepare-enterprise
 	@echo Build OSX amd64
